@@ -1,0 +1,258 @@
+<?xml version="1.0" ?>
+<robot name="Robotic" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find industrial_robot_arm)/urdf/materials.xacro" />
+<xacro:include filename="$(find industrial_robot_arm)/urdf/Robotic.trans" />
+<xacro:include filename="$(find industrial_robot_arm)/urdf/Robotic.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="0.0007806396519895975 -0.0007806396451176688 0.048593515527982106" rpy="0 0 0"/>
+    <mass value="12.473677758806172"/>
+    <inertia ixx="0.118752" iyy="0.118752" izz="0.218412" ixy="0.000272" iyz="-0.000713" ixz="0.000713"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://industrial_robot_arm/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="black"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://industrial_robot_arm/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_1_1">
+  <inertial>
+    <origin xyz="-0.05686158608037086 -0.002799253146421306 0.06290227912529588" rpy="0 0 0"/>
+    <mass value="18.098361474018464"/>
+    <inertia ixx="0.09336" iyy="0.186513" izz="0.127406" ixy="-0.003762" iyz="0.003286" ixz="0.071121"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0 -0.0 -0.104" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://industrial_robot_arm/meshes/link_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="orange"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0 -0.0 -0.104" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://industrial_robot_arm/meshes/link_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_2_1">
+  <inertial>
+    <origin xyz="0.12229160527590884 0.03527212181755472 0.06142410226405509" rpy="0 0 0"/>
+    <mass value="6.899829498653837"/>
+    <inertia ixx="0.035048" iyy="0.134098" izz="0.101041" ixy="0.000808" iyz="0.000236" ixz="-0.054425"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.15 -0.0 -0.244" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://industrial_robot_arm/meshes/link_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="orange"/>
+  </visual>
+  <collision>
+    <origin xyz="0.15 -0.0 -0.244" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://industrial_robot_arm/meshes/link_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_3_1">
+  <inertial>
+    <origin xyz="-0.03191808932938957 -0.02504426785289398 0.04186817725206715" rpy="0 0 0"/>
+    <mass value="9.99270875492589"/>
+    <inertia ixx="0.01399" iyy="0.051348" izz="0.047743" ixy="-0.000586" iyz="0.00092" ixz="0.005161"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.153109 -0.0 -0.419" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://industrial_robot_arm/meshes/link_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="orange"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.153109 -0.0 -0.419" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://industrial_robot_arm/meshes/link_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_4_1">
+  <inertial>
+    <origin xyz="-0.09945544404066245 1.0741896244378935e-07 0.008701266078208925" rpy="0 0 0"/>
+    <mass value="4.896548707938916"/>
+    <inertia ixx="0.004672" iyy="0.015604" izz="0.016812" ixy="-7e-06" iyz="-7.7e-05" ixz="0.00107"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.043204 0.026956 -0.481347" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://industrial_robot_arm/meshes/link_4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="orange"/>
+  </visual>
+  <collision>
+    <origin xyz="0.043204 0.026956 -0.481347" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://industrial_robot_arm/meshes/link_4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_5_1">
+  <inertial>
+    <origin xyz="-0.0595097850745733 -0.012477892757639037 0.004462237715588346" rpy="0 0 0"/>
+    <mass value="2.4502212088594084"/>
+    <inertia ixx="0.001692" iyy="0.00255" izz="0.002521" ixy="0.0" iyz="1e-06" ixz="7.3e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.201016 0.014478 -0.495898" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://industrial_robot_arm/meshes/link_5_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="orange"/>
+  </visual>
+  <collision>
+    <origin xyz="0.201016 0.014478 -0.495898" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://industrial_robot_arm/meshes/link_5_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_6_1">
+  <inertial>
+    <origin xyz="-0.008159984839289869 1.4601279601074435e-05 0.0007194640373505701" rpy="0 0 0"/>
+    <mass value="0.6303591845639697"/>
+    <inertia ixx="0.000332" iyy="0.000301" izz="0.000357" ixy="-0.0" iyz="-3e-06" ixz="2e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.304684 0.026956 -0.504224" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://industrial_robot_arm/meshes/link_6_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="orange"/>
+  </visual>
+  <collision>
+    <origin xyz="0.304684 0.026956 -0.504224" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://industrial_robot_arm/meshes/link_6_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="gripper_left_1">
+  <inertial>
+    <origin xyz="-0.030716855158846146 0.0011153711346979928 0.011819301380110614" rpy="0 0 0"/>
+    <mass value="0.17294239070216955"/>
+    <inertia ixx="2.6e-05" iyy="0.000103" izz="0.000119" ixy="3.8e-05" iyz="-4e-06" ixz="1e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.328483 0.06716 -0.494859" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://industrial_robot_arm/meshes/gripper_left_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.328483 0.06716 -0.494859" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://industrial_robot_arm/meshes/gripper_left_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="gripper_right_1">
+  <inertial>
+    <origin xyz="-0.03070809444653194 -0.0032218850816975956 0.011541454151286601" rpy="0 0 0"/>
+    <mass value="0.1727285383045678"/>
+    <inertia ixx="2.8e-05" iyy="0.0001" izz="0.00012" ixy="-4.1e-05" iyz="2e-06" ixz="6e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.328062 -0.014315 -0.499679" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://industrial_robot_arm/meshes/gripper_right_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.328062 -0.014315 -0.499679" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://industrial_robot_arm/meshes/gripper_right_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="revolute_1" type="continuous">
+  <origin xyz="0.0 0.0 0.104" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="link_1_1"/>
+  <axis xyz="0.0 0.0 1.0"/>
+</joint>
+
+<joint name="revolute_2" type="revolute">
+  <origin xyz="-0.15 0.0 0.14" rpy="0 0 0"/>
+  <parent link="link_1_1"/>
+  <child link="link_2_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+  <limit upper="0.698132" lower="-3.141593" effort="100" velocity="100"/>
+</joint>
+
+<joint name="revolute_3" type="revolute">
+  <origin xyz="0.303109 0.0 0.175" rpy="0 0 0"/>
+  <parent link="link_2_1"/>
+  <child link="link_3_1"/>
+  <axis xyz="0.0 -1.0 -0.0"/>
+  <limit upper="0.349066" lower="-2.443461" effort="100" velocity="100"/>
+</joint>
+
+<joint name="revolute_4" type="continuous">
+  <origin xyz="-0.196313 -0.026956 0.062347" rpy="0 0 0"/>
+  <parent link="link_3_1"/>
+  <child link="link_4_1"/>
+  <axis xyz="-0.996195 0.0 0.087156"/>
+</joint>
+
+<joint name="revolute_5" type="revolute">
+  <origin xyz="-0.157812 0.012478 0.014551" rpy="0 0 0"/>
+  <parent link="link_4_1"/>
+  <child link="link_5_1"/>
+  <axis xyz="-0.005166 -0.998242 -0.059048"/>
+  <limit upper="1.9" lower="-1.9" effort="100" velocity="100"/>
+</joint>
+
+<joint name="revolute_6" type="continuous">
+  <origin xyz="-0.103668 -0.012478 0.008326" rpy="0 0 0"/>
+  <parent link="link_5_1"/>
+  <child link="link_6_1"/>
+  <axis xyz="-0.996195 -0.0 0.087156"/>
+</joint>
+
+<joint name="revolute_7" type="revolute">
+  <origin xyz="-0.023799 -0.040204 -0.009365" rpy="0 0 0"/>
+  <parent link="link_6_1"/>
+  <child link="gripper_left_1"/>
+  <axis xyz="-0.087003 0.059274 -0.994443"/>
+  <limit upper="0" lower="-0.872665" effort="100" velocity="100"/>
+</joint>
+
+<joint name="revolute_8" type="revolute">
+  <origin xyz="-0.023378 0.041271 -0.004545" rpy="0 0 0"/>
+  <parent link="link_6_1"/>
+  <child link="gripper_right_1"/>
+  <axis xyz="-0.087003 0.059274 -0.994443"/>
+  <limit upper="0.872665" lower="0.0" effort="100" velocity="100"/>
+  <mimic joint="revolute_7" multiplier="-1" offset="0"/>
+</joint>
+
+</robot>

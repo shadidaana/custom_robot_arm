@@ -1,0 +1,13 @@
+	1.Build and source your workspace:
+		
+		colcon build
+		source install/setup.bash
+
+	2.Launch rely on urdf_tutorial
+
+		ros2 launch urdf_tutorial display.launch.py model:=$(ros2 pkg prefix manipulator_3dof)/share/manipulator_3dof/urdf/manipulator_3dof.urdf.xacro
+
+	3.Dedicated display.launch.py for your package so you don’t rely on urdf_tutorial
+	
+	ros2 launch manipulator_3dof display.launch.py
+

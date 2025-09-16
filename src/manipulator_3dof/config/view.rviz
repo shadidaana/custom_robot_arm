@@ -1,0 +1,25 @@
+# Minimal RViz config for 3DOF manipulator
+
+Visualization Manager:
+  Class: ""
+  Displays:
+    - Class: rviz/RobotModel
+      Name: RobotModel
+      Enabled: true
+      Robot Description: robot_description
+      Alpha: 1.0
+      Update Topic: robot_description
+      Show Visual: true
+      Show Collision: false
+      TF Prefix: ""
+      Robot State Topic: ""
+      Frame Visible: true
+    - Class: rviz/TF
+      Name: TF
+      Enabled: true
+      Show Axes: true
+      Show Names: true
+      TF Prefix: ""
+  Global Options:
+    Fixed Frame: base_link
+
