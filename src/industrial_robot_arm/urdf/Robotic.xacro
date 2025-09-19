@@ -2,7 +2,7 @@
 <robot name="Robotic" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
 <xacro:include filename="$(find industrial_robot_arm)/urdf/materials.xacro" />
-<xacro:include filename="$(find industrial_robot_arm)/urdf/Robotic.trans" />
+<!-- <xacro:include filename="$(find industrial_robot_arm)/urdf/Robotic.trans" /> -->
 <xacro:include filename="$(find industrial_robot_arm)/urdf/Robotic.gazebo" />
 <link name="base_link">
   <inertial>

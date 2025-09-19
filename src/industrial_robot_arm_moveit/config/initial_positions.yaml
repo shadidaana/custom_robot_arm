@@ -1,11 +1,11 @@
 # Default initial positions for Robotic's ros2_control fake system
 
 initial_positions:
-  revolute_1: 0
-  revolute_2: 0
-  revolute_3: 0
-  revolute_4: 0
-  revolute_5: 0
-  revolute_6: 0
-  revolute_7: 0
-  revolute_8: 0
+  revolute_1: 0.0
+  revolute_2: 0.0
+  revolute_3: 0.0
+  revolute_4: 0.0
+  revolute_5: 0.0
+  revolute_6: 0.0
+  revolute_7: 0.0
+  revolute_8: 0.0

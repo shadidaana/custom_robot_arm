@@ -3,9 +3,17 @@
 
 <xacro:property name="body_color" value="Gazebo/Silver" />
 
+<!-- <gazebo> -->
+  <!-- <plugin name="control" filename="libgazebo_ros2_control.so"/> -->
+  <!-- <parameters>$(find industrial_robot_arm_moveit)/config/ros2_controllers.yaml</parameters> -->
+<!-- </gazebo> -->
+
 <gazebo>
-  <plugin name="control" filename="libgazebo_ros_control.so"/>
+  <plugin filename="libgazebo_ros2_control.so" name="gazebo_ros2_control">
+    <parameters>$(find industrial_robot_arm_moveit)/config/ros2_controllers.yaml</parameters>
+  </plugin>
 </gazebo>
+
 <gazebo reference="base_link">
   <material>${body_color}</material>
   <mu1>0.2</mu1>

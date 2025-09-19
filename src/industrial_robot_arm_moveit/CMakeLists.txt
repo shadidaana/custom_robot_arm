@@ -3,6 +3,10 @@ project(industrial_robot_arm_moveit)
 
 find_package(ament_cmake REQUIRED)
 
+find_package(gazebo_ros REQUIRED)
+find_package(ros2_control REQUIRED)
+find_package(ros2_controllers REQUIRED)
+ 
 ament_package()
 
 if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/launch")
@@ -11,6 +15,16 @@ if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/launch")
     DESTINATION share/${PROJECT_NAME}
     PATTERN "setup_assistant.launch" EXCLUDE)
 endif()
+
+#install(
+#  DIRECTORY urdf/
+#  DESTINATION share/${PROJECT_NAME}/urdf
+#)
+
+# install(
+#  DIRECTORY config/
+#  DESTINATION share/${PROJECT_NAME}/config
+# )
 
 install(DIRECTORY config DESTINATION share/${PROJECT_NAME})
 install(FILES .setup_assistant DESTINATION share/${PROJECT_NAME})
