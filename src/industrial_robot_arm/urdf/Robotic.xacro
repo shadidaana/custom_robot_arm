@@ -193,6 +193,13 @@
   </collision>
 </link>
 
+<link name="world"/>
+<joint name="world_to_base" type="fixed">
+  <parent link="world"/>
+  <child link="base_link"/> 
+</joint>
+
+
 <joint name="revolute_1" type="continuous">
   <origin xyz="0.0 0.0 0.104" rpy="0 0 0"/>
   <parent link="base_link"/>

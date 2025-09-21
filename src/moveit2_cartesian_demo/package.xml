@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>moveit2_cartesian_demo</name>
+  <version>0.0.0</version>
+  <description>Cartesian motion demo for MoveIt 2</description>
+  <maintainer email="shadi_dana@hotmail.com">shadi</maintainer>
+  <license>TODO: License declaration</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+
+  
+  <!-- <depend>rclcpp</depend> ROS 2 Client Library for C++
+  Provides the core functionality for creating ROS 2 nodes, publishers, subscribers, and services in C++
+  Without it: You can't create ROS 2 nodes or use any ROS 2 features
+  -->
+  <depend>rclcpp</depend>
+
+
+  <!-- <depend>moveit_ros_planning_interface</depend> MoveIt's planning interface for ROS 2
+  Provides the MoveGroupInterface class that lets you control robots with MoveIt
+  Without it: You can't use move_group->move(), move_group->plan(), or any MoveIt functionality
+  -->
+  <depend>moveit_ros_planning_interface</depend>
+
+  <!-- <depend>geometry_msgs</depend> Geometry message types
+  Provides geometry_msgs::msg::Pose for representing positions and orientations
+  Without it: You can't create or use pose messages for Cartesian movements
+  -->
+  <depend>geometry_msgs</depend>
+
+  <!-- <depend>tf2_geometry_msgs</depend> TF2 geometry message conversions
+  Provides functions for converting between different rotation representations (quaternions, Euler angles)
+  Without it: You can't easily handle robot orientations and rotations
+  -->
+  <depend>tf2_geometry_msgs</depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>
