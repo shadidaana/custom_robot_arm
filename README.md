@@ -89,11 +89,8 @@ ros2 launch robot_joystick_control <launch_file>.launch.py
 
 ## Screenshots
 
-
-```
-docs/images/rviz.png
-docs/images/gazebo.png
-```
+![Gazebo Simulation](docs/images/gazebo.png)
+![RViz Visualization](docs/images/rviz.png)
 
 ## Future Work
 
